@@ -19,7 +19,8 @@ export default function AddTodo({submitHandler}){
             value={text}
             />
             <Button 
-            onPress={()=> submitHandler(text)} title='add todo' color= 'coral'
+            onPress={()=> submitHandler(text)} title='add todo' color= 'coral' 
+            buttonStyle={styles.button}
             />
         </View>
     )
@@ -32,5 +33,8 @@ const styles = StyleSheet.create({
         paddingVertical: 6,
         borderBottomWidth: 1,
         borderBottomColor: '#ddd'
+    },
+    button: {
+        backgroundColor: '#00aeef'
     }
 })
