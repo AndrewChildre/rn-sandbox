@@ -4,12 +4,14 @@ import { StyleSheet, Text, View, FlatList, TouchableWithoutFeedback, Alert, Keyb
 import Header from './components/Header';
 import TodoItem from './components/TodoItem';
 import AddTodo from './components/AddTodo';
+import Sandbox from './components/sandbox';
 
 export default function App() {
   const [todos, setTodos] = useState([
     {text: 'Sleep today', key: '1'},
     {text: 'shop for stuff', key: '2'},
     {text: 'fix stuff', key: '3'},
+
     
   ]);
   const pressHandler = (key) => {
@@ -45,6 +47,10 @@ export default function App() {
 
 
   return (
+
+      // <Sandbox />
+
+
     <TouchableWithoutFeedback onPress={()=>{
       Keyboard.dismiss();
     }}>
@@ -74,17 +80,21 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    paddingTop: 40,
-    paddingHorizontal: 20
+    // paddingTop: 40,
+    // paddingHorizontal: 20
     // alignItems: 'center',
     // justifyContent: 'center',
   },
   content: {
     padding: 10,
+ 
+    flex: 1,
   },
 
   list: {
+    flex: 1,
     marginTop: 20,
+    
   }
 
 
